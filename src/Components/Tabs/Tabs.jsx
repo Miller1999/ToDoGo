@@ -11,7 +11,7 @@ export default function Tabs() {
   const [active, setActive] = useState(false);
   const [completed, setCompleted] = useState(false);
   const { item, saveItem } = useLocalStorage("V1", []);
-
+  //Funciones para la lista de items
   function completeTodo(text) {
     const userTodos = [...item];
     const index = userTodos.findIndex((todo) => todo.text === text);
@@ -33,6 +33,15 @@ export default function Tabs() {
     saveItem(uncompleteTodo);
   };
 
+  const addItem = (text) => {
+    const newTodos = [...item];
+    newTodos.push({
+      text,
+      completed: false,
+    });
+    saveItem(newTodos);
+  };
+  //Funciones para mostrar las diferentes vistas de la pagina
   function mostrarAll() {
     setAll(!all);
     setActive(false);
@@ -77,7 +86,7 @@ export default function Tabs() {
             Completed
           </span>
         </div>
-        <Search />
+        <Search addItem={addItem} />
         <ToDos>
           {activeTodos.map((todo) => {
             return (
@@ -122,7 +131,6 @@ export default function Tabs() {
             Completed
           </span>
         </div>
-        <Search />
         <ToDos>
           {item
             .filter((todo) => todo.completed === true)
@@ -172,7 +180,7 @@ export default function Tabs() {
             Completed
           </span>
         </div>
-        <Search />
+        <Search addItem={addItem} />
         <ToDos>
           {item.map((todo) => {
             return (

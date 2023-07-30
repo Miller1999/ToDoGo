@@ -1,4 +1,14 @@
 #root {
   display: flex;
   justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+.main {
+  width: 50%;
+}
+@media (max-width: 425px) {
+  .main {
+    width: 90%;
+  }
 }
