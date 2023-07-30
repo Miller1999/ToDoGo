@@ -1,8 +1,5 @@
 import "./Input.css";
-const Input = ({ placeholder, checkbox, id, checked }) => {
-  if (checkbox) {
-    return <input type="checkbox" id={id} checked={checked} />;
-  }
+const Input = ({ placeholder }) => {
   return (
     <input
       placeholder={placeholder}

@@ -1,24 +1,31 @@
 import DeleteIcon from "@mui/icons-material/Delete";
-import Input from "../Input/Input";
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
 
 function ToDo({ text, completed }) {
   if (completed) {
     return (
-      <div className="flex items-center justify-between">
+      <div className="flex items-center gap-2 justify-between">
         <div className="flex items-center gap-2">
-          <Input checkbox id={text} />
-          <label htmlFor={text} style={{ textDecoration: "line-through" }}>
-            {text}
-          </label>
+          <button>
+            <CheckBoxIcon color="primary" />
+          </button>
+          <p className="line-through">{text}</p>
         </div>
-        <DeleteIcon />
+        <div>
+          <button>
+            <DeleteIcon />
+          </button>
+        </div>
       </div>
     );
   }
   return (
     <div className="flex items-center gap-2">
-      <Input checkbox id={text} />
-      <label htmlFor={text}>{text}</label>
+      <button>
+        <CheckBoxOutlineBlankIcon color="primary" />
+      </button>
+      <p>{text}</p>
     </div>
   );
 }

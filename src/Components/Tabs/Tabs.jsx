@@ -26,7 +26,6 @@ export default function Tabs({ allTodos }) {
     setAll(false);
   }
   const activeTodos = allTodos.filter((todo) => todo.completed === false);
-  console.log(activeTodos);
 
   if (active) {
     return (
