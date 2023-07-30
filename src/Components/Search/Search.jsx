@@ -1,8 +1,11 @@
+import Button from "../Button/Button";
+import Input from "../Input/Input";
+
 export default function Search() {
   return (
-    <div>
-      <input placeholder="add details" />
-      <button>Add</button>
+    <div className="flex justify-around items-center">
+      <Input placeholder="Add ToDo" />
+      <Button>Add</Button>
     </div>
   );
 }

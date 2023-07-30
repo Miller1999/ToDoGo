@@ -1,0 +1,4 @@
+span:hover {
+  border-bottom: 2px solid cyan;
+  cursor: pointer;
+}
