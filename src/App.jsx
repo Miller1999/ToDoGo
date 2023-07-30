@@ -7,26 +7,26 @@ import Footer from "./Components/Footer/Footer";
 //CSS
 import "./App.css";
 
-const ToDoPrueba = [
-  {
-    text: "Item 1",
-    completed: false,
-  },
-  {
-    text: "Item 2",
-    completed: false,
-  },
-  {
-    text: "Item 3",
-    completed: true,
-  },
-];
+// const ToDoPrueba = [
+//   {
+//     text: "Item 1",
+//     completed: true,
+//   },
+//   {
+//     text: "Item 2",
+//     completed: false,
+//   },
+//   {
+//     text: "Item 3",
+//     completed: true,
+//   },
+// ];
 
 export default function App() {
   return (
     <main className="flex flex-col gap-5 justify-center w-2/4 relative">
       <Header />
-      <Tabs allTodos={ToDoPrueba} />
+      <Tabs />
       <Footer />
     </main>
   );

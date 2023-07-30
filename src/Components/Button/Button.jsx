@@ -1,8 +1,11 @@
 import DeleteIcon from "@mui/icons-material/Delete";
-const Button = ({ children, deleteAll }) => {
+const Button = ({ children, deleteAll, onDeleteAll }) => {
   if (deleteAll) {
     return (
-      <button className="bg-red-600 text-white w-24 p-4 rounded-xl flex items-center justify-center gap-1 self-end">
+      <button
+        className="bg-red-600 text-white w-24 p-4 rounded-xl flex items-center justify-center gap-1 self-end"
+        onClick={onDeleteAll}
+      >
         <DeleteIcon fontSize="small" /> {children}
       </button>
     );
