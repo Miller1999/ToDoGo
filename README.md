@@ -59,13 +59,9 @@
 Challenge: Create a todo app following given designs. Use Front-end libraries like React or Vue. Don’t look at the existing solution. Fulfill user stories below:
 
 - User story: I can add a new task
-<br>
 - User story: I can complete a task
-<br>
 - User story: I can toggle between All, Active and Completed
-<br>
 - User story: I can remove one or all tasks under the Completed tab
-<br>
 - User story (optional): Store the data in local storage that when I refresh the page I can still see my progress
 <br>
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5) was to build an application to complete the given user stories.
